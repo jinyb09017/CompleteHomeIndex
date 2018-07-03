@@ -24,10 +24,13 @@ public class HomePresenter<V extends MainView> implements BasePresenter {
     }
 
     @Override
-    public void start() {
+    public void start(boolean showLoading) {
 
         NetworkRequest networkRequest = new NetworkRequest();
-        view.showLoading();
+        if (showLoading) {
+            view.showLoading();
+        }
+
         networkRequest.load(new NetworkListener<HomeBean>() {
 
             @Override

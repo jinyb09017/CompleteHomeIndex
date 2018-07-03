@@ -9,5 +9,5 @@ package com.abbott.longhomeindex.presenter;
  */
 
 public interface BasePresenter{
-    void start();
+    void start(boolean showLoading);
 }

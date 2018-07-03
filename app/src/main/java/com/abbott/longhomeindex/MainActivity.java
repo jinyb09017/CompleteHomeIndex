@@ -20,6 +20,7 @@ import com.abbott.longhomeindex.utils.ScreenUtil;
 import com.abbott.longhomeindex.utils.StatusBarUtil;
 import com.abbott.longhomeindex.view.GradationScrollView;
 import com.abbott.longhomeindex.view.LongLinearLayout;
+import com.abbott.longhomeindex.view.NetWorkLoading;
 import com.abbott.longhomeindex.view.OverlayLayout;
 
 import cn.bingoogolapple.refreshlayout.BGANormalRefreshViewHolder;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements MainView<HomeBean
     private int changeTitleHeight = 100;
     private BGARefreshLayout mRefreshLayout;
     private OverlayLayout overlayLayout;
+    private NetWorkLoading networkLoading;
 
 
     @Override
@@ -53,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements MainView<HomeBean
         home_header_bar = (RelativeLayout) findViewById(R.id.home_header_bar);
         mRefreshLayout = (BGARefreshLayout) findViewById(R.id.rl_refresh);
         overlayLayout = new OverlayLayout(this);
+        networkLoading = new NetWorkLoading(this);
 
         overlayLayout.setOverlayView(R.layout.holder_network);
         overlayLayout.attachTo(mRefreshLayout);
@@ -70,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements MainView<HomeBean
         longLinearLayout.addViewModule(new FooterViewHolder());
 
 
-        homePresenter.start();
+        homePresenter.start(true);
 
         initRefreshLayout();
     }
@@ -103,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements MainView<HomeBean
         overlayLayout.findViewById(R.id.tv_retry).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                homePresenter.start();
+                homePresenter.start(true);
             }
         });
     }
@@ -144,12 +147,15 @@ public class MainActivity extends AppCompatActivity implements MainView<HomeBean
 
     @Override
     public void showLoading() {
+        networkLoading.showDialog("");
 
     }
 
     @Override
     public void dismissLoading() {
 
+
+        networkLoading.dismissDialog();
         mRefreshLayout.endRefreshing();
 
 
@@ -166,7 +172,7 @@ public class MainActivity extends AppCompatActivity implements MainView<HomeBean
 
     @Override
     public void onBGARefreshLayoutBeginRefreshing(BGARefreshLayout refreshLayout) {
-        homePresenter.start();
+        homePresenter.start(false);
     }
 
     @Override
