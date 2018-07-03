@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/ll_network"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:visibility="gone"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/network_error" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:gravity="center"
+        android:text="@string/network_tips"
+        android:textColor="@color/c_999999"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/tv_retry"
+        android:layout_width="106dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_network_reload"
+        android:gravity="center"
+        android:text="@string/reload"
+
+
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

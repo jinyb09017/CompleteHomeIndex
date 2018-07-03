@@ -1,0 +1,201 @@
+{
+  "Code": 0,
+  "Message": "string",
+  "Data": {
+    "headUrl": "string",
+    "appTravelRecommendIndexDTOS": [
+      {
+        "contentId": 0,
+        "indexUrl": "http://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528869925571&di=5dd594d230edaf50759962559e91ae11&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F11%2F53%2F55d55f9b386e6_1024.jpg",
+        "viewType": 0,
+        "jumpUrl": "string"
+      },
+      {
+        "contentId": 0,
+        "indexUrl": "http://www.123xiecheng.com/uploads/allimg/171206/1-1G206235031S6.jpg",
+        "viewType": 0,
+        "jumpUrl": "string"
+      },
+      {
+        "contentId": 0,
+        "indexUrl": "http://cms-bucket.nosdn.127.net/a8d378d1b23645c2ab8e60e10b4f9ca320180528202944.jpeg",
+        "viewType": 0,
+        "jumpUrl": "string"
+      },
+      {
+        "contentId": 0,
+        "indexUrl": "https://www.wstimes.cn/data/images/pictures/2017/03/20170308062003525.png",
+        "viewType": 0,
+        "jumpUrl": "string"
+      }
+    ],
+    "appTravelHotTowIndexDTOS": [
+      {
+        "cityId": 0,
+        "cityName": "杭州",
+        "thumbnailUrl": "https://stc.zjol.com.cn/g1/M000F54CggSDVj94LiASIPTAADXdVrGUn4781.jpg?width=450&height=293",
+        "viewType": 0
+      },
+      {
+        "cityId": 0,
+        "cityName": "武汉",
+        "thumbnailUrl": "http://img.soufunimg.com/news/2017_10/16/home/1508158101525_000.jpg",
+        "viewType": 0
+      },
+      {
+        "cityId": 0,
+        "cityName": "澳门",
+        "thumbnailUrl": "http://imgs.focus.cn/upload/pics/38965/b_389641484.jpg",
+        "viewType": 0
+      },
+      {
+        "cityId": 0,
+        "cityName": "北京",
+        "thumbnailUrl": "http://www.885.com/data/upload/ueditor/20170602/593119f50a22b.jpg",
+        "viewType": 0
+      }
+    ],
+    "appTravelHotCityIndexDTOS": [
+      {
+        "cityName": "海南",
+        "summary": "你永远忘不了的天堂",
+        "detail": "阳光明媚、水清沙白的海岛，四季如夏的生活是越来越多海岛旅居族生活的一部分",
+        "subList": [
+          {
+            "contentId": 0,
+            "indexUrl": "http://www.hf9588.com/SubPublic/Upload/UploadFile/image/2017/11/06/Max_201711061509328433.jpg",
+            "viewType": 0,
+            "jumpUrl": "string",
+            "keywords": "金滩、海景，变得越来越稀缺"
+          },
+          {
+            "contentId": 0,
+            "indexUrl": "http://www.hnfc77.com/editor/attached/image/20171004/20171004173524_54055.jpg",
+            "viewType": 0,
+            "jumpUrl": "string",
+            "keywords": "美丽大方"
+          },
+          {
+            "contentId": 0,
+            "indexUrl": "http://www.ifang0898.com/uploadfile/2017/0707/20170707053704824.jpg",
+            "viewType": 0,
+            "jumpUrl": "string",
+            "keywords": "人生无忧"
+          },
+          {
+            "contentId": 0,
+            "indexUrl": "http://www.0898168.cn/uploadfile/2017/0425/20170425114112935.jpg",
+            "viewType": 0,
+            "jumpUrl": "string",
+            "keywords": "美到陶醉"
+          },
+          {
+            "contentId": 0,
+            "indexUrl": "http://imgs5.soufunimg.com/news/2018_03/26/1522054163258.jpg",
+            "viewType": 0,
+            "jumpUrl": "string",
+            "keywords": "超强配套"
+          }
+        ],
+        "viewType": 0
+      },
+      {
+        "cityName": "丽江",
+        "summary": "你永远忘不了的天堂",
+        "detail": "云南的神奇之处在于它的大格局，它收的下浪子和狂人，也载的起黄金屋",
+        "subList": [
+          {
+            "contentId": 0,
+            "indexUrl": "http://p1.qpic.cn/estate/0/60ab94b25a0b5f7967287779d9ef8219.jpg/1024",
+            "viewType": 0,
+            "jumpUrl": "string",
+            "keywords": "金滩、海景，变得越来越稀缺"
+          },
+          {
+            "contentId": 0,
+            "indexUrl": "http://www.hnfc77.com/editor/attached/image/20171004/20171004173524_54055.jpg",
+            "viewType": 0,
+            "jumpUrl": "string",
+            "keywords": "稀缺小户型"
+          },
+          {
+            "contentId": 0,
+            "indexUrl": "http://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528872093599&di=968c9762b23b6b14bb8061bda0f7643c&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F26%2F05%2F92%2F58b9235c928f4_1024.jpg",
+            "viewType": 0,
+            "jumpUrl": "string",
+            "keywords": "小径南山"
+          },
+          {
+            "contentId": 0,
+            "indexUrl": "http://img4.cache.netease.com/photo/0268/2016-07-21/BSG9JP73DNNC0268.jpg",
+            "viewType": 0,
+            "jumpUrl": "string",
+            "keywords": "户户瞰海"
+          },
+          {
+            "contentId": 0,
+            "indexUrl": "http://www.sanyafz.com/Uploads/estate/original_img/14963089611339173121.jpg",
+            "viewType": 0,
+            "jumpUrl": "string",
+            "keywords": "50万坐拥海岛"
+          }
+        ],
+        "viewType": 0
+      }
+    ],
+    "appTravelBrokerIndexDTOS": [
+      {
+        "infoId": 0,
+        "brokerName": "张三丰",
+        "brokerTitle": "张诩带您了解梦开始的地方",
+        "shortTitle": "浪漫海岛、雪山下的房子、徽派小镇、科技之城",
+        "avatarUrl": "https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1970534157,1154154617&fm=58&bpow=1500&bpoh=2164"
+      },
+      {
+        "infoId": 0,
+        "brokerName": "张三丰",
+        "brokerTitle": "胡迪泰国旅居资产配置",
+        "shortTitle": "浪漫海岛、雪山下的房子、徽派小镇、科技之城",
+        "avatarUrl": "https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1758343206,1224786249&fm=58&bpow=1024&bpoh=1536"
+      }
+    ],
+    "appTravelHotLineIndexDTOS": [
+      {
+        "contentId": 0,
+        "indexUrl": "http://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528872093599&di=968c9762b23b6b14bb8061bda0f7643c&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F26%2F05%2F92%2F58b9235c928f4_1024.jpg",
+        "lineName": "海岛生活",
+        "summary": "诗情画意海岛畅意游，提供食宿",
+        "detail": "带你领略临海风光与南海风情。海口、临高、澄迈三大投资热门，专业地接陪同，食宿全包",
+        "price": "¥1278",
+        "jumpUrl": "string"
+      },
+      {
+        "contentId": 0,
+        "indexUrl": "http://www.123xiecheng.com/uploads/allimg/171206/1-1G206235031S6.jpg",
+        "lineName": "山居生活",
+        "summary": "云南大理丽江，4天3晚，提供食宿",
+        "detail": "带你领略临‘风花雪月’奇景，游历丽江古城，沿途有价值的房产让你一路看尽",
+        "price": "3400",
+        "jumpUrl": "string"
+      }
+    ],
+    "appTravelLectureIndexDTOS": [
+      {
+        "lectureId": 0,
+        "lectureTitle": "如何在海南买房1年翻2倍，你相信吗",
+        "thumbnailUrl": "http://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1530536429136&di=9e06eef7809aa2b5035b332e9914e0e8&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201501%2F14%2F20150114145326_sQPjW.jpeg"
+      },
+      {
+        "lectureId": 0,
+        "lectureTitle": "10万起家在马来拥有3套房,你也值得拥有",
+        "thumbnailUrl": "http://img.8fkd.com/yy/20137/903762.jpg"
+      },
+      {
+        "lectureId": 0,
+        "lectureTitle": "这些年看过的泰国投资项目，一起看过来",
+        "thumbnailUrl": "http://img.51yangsheng.com/pic3/2018/0618/1818659.jpg"
+      }
+    ]
+  },
+  "ServerTime": "string"
+}

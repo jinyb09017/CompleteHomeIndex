@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">longHomeIndex</string>
+
+    <string name="network_weak">手机网络不太通畅</string>
+    <string name="network_error">服务器生病了</string>
+    <string name="network_tips">网络好像不给力，请稍后再试</string>
+
+    <string name="reload">重新加载</string>
+</resources>

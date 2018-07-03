@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.abbott.longhomeindex.MainActivity">
+
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/rl_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.abbott.longhomeindex.view.GradationScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.abbott.longhomeindex.view.LongLinearLayout
+                android:id="@+id/long_linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </com.abbott.longhomeindex.view.LongLinearLayout>
+        </com.abbott.longhomeindex.view.GradationScrollView>
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+    <include
+        layout="@layout/home_header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:visibility="gone" />
+</RelativeLayout>
