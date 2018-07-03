@@ -6,5 +6,6 @@
 ### 演示图如下
 
 ![image](./screenshot/1.png)
-![image](./screenshot/2.png)
+
+
 ![image](./screenshot/auto.gif)
