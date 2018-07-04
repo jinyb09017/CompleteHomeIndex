@@ -17,11 +17,12 @@
     <TextView
         android:id="@+id/tv_city"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_centerVertical="true"
         android:layout_marginRight="10dp"
         android:gravity="center"
         android:text="香港"
+        android:background="#26000000"
         android:textColor="#FFFFFFFF"
         android:textSize="20dp"
         android:textStyle="bold" />

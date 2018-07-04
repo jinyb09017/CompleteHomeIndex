@@ -89,11 +89,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/iv_hot_first"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="23dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:text="金滩、海景，变得越来越稀缺"
+            android:maxLines="1"
+            android:ellipsize="end"
             android:textColor="#ffffff"
+            android:background="@drawable/pic_gradient"
+
             android:textSize="18dp"
             android:textStyle="bold" />
 
