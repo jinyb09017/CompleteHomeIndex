@@ -16,7 +16,7 @@
             android:value="2.1" />
 
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".HomeTourActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

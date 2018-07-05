@@ -31,5 +31,6 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.2'
     compile "com.android.support:design:${supportLibVersion}"
     compile 'cn.bingoogolapple:bga-refreshlayout:1.1.8'
+    compile 'in.srain.cube:ultra-ptr:1.0.11'
     testCompile 'junit:junit:4.12'
 }

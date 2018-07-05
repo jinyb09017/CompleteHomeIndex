@@ -2,6 +2,6 @@
 
 
     <dimen name="statusbar_view_height">0dp</dimen>
-
+    <dimen name="kkrefreshheader_image">25dp</dimen>
 
 </resources>

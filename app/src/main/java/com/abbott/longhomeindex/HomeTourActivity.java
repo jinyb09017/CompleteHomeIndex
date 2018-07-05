@@ -19,14 +19,16 @@ import com.abbott.longhomeindex.presenter.HomePresenter;
 import com.abbott.longhomeindex.utils.ScreenUtil;
 import com.abbott.longhomeindex.utils.StatusBarUtil;
 import com.abbott.longhomeindex.view.GradationScrollView;
+import com.abbott.longhomeindex.view.KkPullLayout;
 import com.abbott.longhomeindex.view.LongLinearLayout;
 import com.abbott.longhomeindex.view.NetWorkLoading;
 import com.abbott.longhomeindex.view.OverlayLayout;
 
-import cn.bingoogolapple.refreshlayout.BGANormalRefreshViewHolder;
-import cn.bingoogolapple.refreshlayout.BGARefreshLayout;
+import in.srain.cube.views.ptr.PtrDefaultHandler;
+import in.srain.cube.views.ptr.PtrFrameLayout;
+import in.srain.cube.views.ptr.PtrHandler;
 
-public class MainActivity extends AppCompatActivity implements MainView<HomeBean>, BGARefreshLayout.BGARefreshLayoutDelegate {
+public class HomeTourActivity extends AppCompatActivity implements MainView<HomeBean> {
 
     private GradationScrollView scrollView;
     private LongLinearLayout longLinearLayout;
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements MainView<HomeBean
     private int location;//记录滚动位置
     private RelativeLayout home_header_bar;
     private int changeTitleHeight = 100;
-    private BGARefreshLayout mRefreshLayout;
+    private KkPullLayout mPtrFrame;
     private OverlayLayout overlayLayout;
     private NetWorkLoading networkLoading;
 
@@ -42,23 +44,23 @@ public class MainActivity extends AppCompatActivity implements MainView<HomeBean
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home_tour);
 
 
         StatusBarUtil.setTranslucentForImageViewInFragment(this, 0, null);
-        StatusBarUtil.setLightMode(MainActivity.this);
+        StatusBarUtil.setLightMode(HomeTourActivity.this);
 
 
         homePresenter = new HomePresenter(this);
         longLinearLayout = (LongLinearLayout) findViewById(R.id.long_linearLayout);
         scrollView = (GradationScrollView) findViewById(R.id.scrollView);
         home_header_bar = (RelativeLayout) findViewById(R.id.home_header_bar);
-        mRefreshLayout = (BGARefreshLayout) findViewById(R.id.rl_refresh);
+        mPtrFrame = (KkPullLayout) findViewById(R.id.mRefreshLayout);
         overlayLayout = new OverlayLayout(this);
         networkLoading = new NetWorkLoading(this);
 
         overlayLayout.setOverlayView(R.layout.holder_network);
-        overlayLayout.attachTo(mRefreshLayout);
+        overlayLayout.attachTo(mPtrFrame);
 
 
         setListener();
@@ -81,11 +83,36 @@ public class MainActivity extends AppCompatActivity implements MainView<HomeBean
 
     private void initRefreshLayout() {
         // 为BGARefreshLayout 设置代理
-        mRefreshLayout.setDelegate(this);
-        // 设置下拉刷新和上拉加载更多的风格     参数1：应用程序上下文，参数2：是否具有上拉加载更多功能
-//        BGARefreshViewHolder refreshViewHolder = new BGAMeiTuanRefreshViewHolder(getActivity(), true);
-        // 设置下拉刷新和上拉加载更多的风格
-        mRefreshLayout.setRefreshViewHolder(new BGANormalRefreshViewHolder(this, true));
+// the following are default settings
+        mPtrFrame.setResistance(1.7f);
+        mPtrFrame.setRatioOfHeaderHeightToRefresh(1.2f);
+        mPtrFrame.setDurationToClose(200);
+        mPtrFrame.setDurationToCloseHeader(1000);
+// default is false
+        mPtrFrame.setPullToRefresh(false);
+// default is true
+        mPtrFrame.setKeepHeaderWhenRefresh(true);
+
+
+        mPtrFrame.setPtrHandler(new PtrHandler() {
+            @Override
+            public void onRefreshBegin(PtrFrameLayout frame) {
+                homePresenter.start(false);
+            }
+
+            @Override
+            public boolean checkCanDoRefresh(PtrFrameLayout frame, View content, View header) {
+                // 默认实现，根据实际情况做改动
+                return PtrDefaultHandler.checkContentCanBePulledDown(frame, content, header);
+            }
+        });
+
+        mPtrFrame.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mPtrFrame.autoRefresh();
+            }
+        }, 10000);
 
 
     }
@@ -156,7 +183,7 @@ public class MainActivity extends AppCompatActivity implements MainView<HomeBean
 
 
         networkLoading.dismissDialog();
-        mRefreshLayout.endRefreshing();
+        mPtrFrame.refreshComplete();
 
 
     }
@@ -170,13 +197,4 @@ public class MainActivity extends AppCompatActivity implements MainView<HomeBean
 
     }
 
-    @Override
-    public void onBGARefreshLayoutBeginRefreshing(BGARefreshLayout refreshLayout) {
-        homePresenter.start(false);
-    }
-
-    @Override
-    public boolean onBGARefreshLayoutBeginLoadingMore(BGARefreshLayout refreshLayout) {
-        return false;
-    }
 }
