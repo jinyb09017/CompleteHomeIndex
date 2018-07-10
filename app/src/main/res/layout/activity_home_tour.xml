@@ -7,7 +7,7 @@
     android:background="#ffffff"
     tools:context="com.abbott.longhomeindex.HomeTourActivity">
 
-    <com.abbott.longhomeindex.view.KkPullLayout
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
         android:id="@+id/mRefreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -32,7 +32,7 @@
 
             </com.abbott.longhomeindex.view.LongLinearLayout>
         </com.abbott.longhomeindex.view.GradationScrollView>
-    </com.abbott.longhomeindex.view.KkPullLayout>
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
 
     <include
         layout="@layout/back_header_bar"

@@ -66,7 +66,7 @@ public class KKMRefreshHeader extends ViewGroup implements PtrUIHandler {
     }
 
     protected void initViews() {
-        valueAnimator = ValueAnimator.ofFloat(0, 180, 360);
+        valueAnimator = ValueAnimator.ofFloat(lastDegree, 360);
         valueAnimator.setRepeatCount(ValueAnimator.INFINITE);
         valueAnimator.setInterpolator(new LinearInterpolator());
         valueAnimator.setDuration(1000);

@@ -32,6 +32,7 @@ public class KkPullLayout extends PtrFrameLayout {
         mKKRefreshHeader = new KKMRefreshHeader(getContext());
         setHeaderView(mKKRefreshHeader);
         addPtrUIHandler(mKKRefreshHeader);
+        disableWhenHorizontalMove(true);
 
     }
 
